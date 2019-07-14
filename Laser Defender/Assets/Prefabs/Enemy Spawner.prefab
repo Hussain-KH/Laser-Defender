@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1274338714844764}
+  m_IsPrefabAsset: 1
+--- !u!1 &1274338714844764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4446955422060492}
+  - component: {fileID: 114684439540527988}
+  m_Layer: 0
+  m_Name: Enemy Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4446955422060492
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274338714844764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.081082255, y: -1.5434052, z: -0.12109375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114684439540527988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1274338714844764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dc35f9cc4ad56c47a71c4b2d9f2f79e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveConfigs:
+  - {fileID: 11400000, guid: f641d91ac9c1fde48bde43a04eb3dd43, type: 2}
+  - {fileID: 11400000, guid: d1caff5313fe7ac4287c7c00d40d9de2, type: 2}
+  - {fileID: 11400000, guid: 2ff90a94ae2bd9c4889525b8eb6c7ce2, type: 2}
+  - {fileID: 11400000, guid: 09c4b6e673d67ea4e94abf7fc9d93781, type: 2}
+  - {fileID: 11400000, guid: 461eebbbced7cf84c82dabed6f97b062, type: 2}
+  - {fileID: 11400000, guid: 705127f4ee6218341ab97b2826f5f1c5, type: 2}
+  - {fileID: 11400000, guid: f9554224488dfa4429b704d86135618a, type: 2}
+  - {fileID: 11400000, guid: c465aa12ea8af794dab71dce640bede6, type: 2}
+  startingWave: 5
+  looping: 1
+  timeBetweenWaves: 3
+  bossDead: 0
