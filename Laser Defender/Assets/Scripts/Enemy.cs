@@ -49,6 +49,7 @@ public class Enemy : MonoBehaviour {
         {
             transform.Rotate(0, 0, bossRotate);
             scoreValue = gameSession.GetScore();
+            enemySpawner.bossAlive = true;
         }
     }
 
@@ -119,6 +120,7 @@ public class Enemy : MonoBehaviour {
 
     private void Die()
     {
+        enemySpawner.bossAlive = false;
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
         GameObject particleInstance = Instantiate(deathVFX, transform.position, Quaternion.identity);

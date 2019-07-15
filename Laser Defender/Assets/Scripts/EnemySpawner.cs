@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour {
     [SerializeField] int startingWave = 0;
     [SerializeField] bool looping = false;
     [SerializeField] float timeBetweenWaves = 0;
-    public bool bossDead = false;
+    public bool bossAlive = false;
 
     Enemy enemy;
 
@@ -32,8 +32,11 @@ public class EnemySpawner : MonoBehaviour {
             var currentWave = waveConfigs[waveIndex];
 
             timeBetweenWaves = currentWave.timeBetweenWaves;
-            yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
-            yield return new WaitForSeconds(timeBetweenWaves);
+            if (bossAlive == false)
+            {
+                yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+                yield return new WaitForSeconds(timeBetweenWaves);
+            }
         }
     }
 
